@@ -15,14 +15,3 @@ def index(request):
         'post_list':post_list})
 
 
-def index1(request):
-    category_list = Category.objects.all()
-    for category in category_list:
-        posts = Post.objects.filter(category__category_name=category)
-    
-    print(posts)
-
-    return render(request, 'base.html',{
-        'category_list':category_list,
-        'post_list':post_list
-    })
