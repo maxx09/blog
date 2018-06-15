@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <ul class="post-list">
+            {% for post in post_list %}
+            <li>
+                <div class="card mb-3">
+                    {% if post.photo %}
+                    <img class="card-img-top" src="{{ post.photo.url }}"  style="width: 100%; height: 150px" alt="Card image cap">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#">{{ post.title }}</a></h5>
+                        <p class="card-text">{{ post.content }}</p>
+                        <p class="card-text">
+                            <small class="text-muted">{{ post.created_at }}</small>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

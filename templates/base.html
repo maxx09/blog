@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static "css/lib/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/lib/fontawesome-all.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/base.css" %}">
+
+    <title>Maxx' Blog</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="태그 검색">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-4">
+                    <i class="fas fa-chevron-left" style="color:white"></i> 
+                    <span class="p-1">Welcome</span> <span class="p-2">to</span> <span class="p-3">maxx'</span> <span class="p-4">blog /</span>
+                    <i class="fas fa-chevron-right" style="color:white"></i>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="main-category col-sm-2">
+                <div class="main-column-title">
+                    Category
+                    <i class="fas fa-angle-double-left btn-hide" style="font-size:2em;"></i>
+                </div>
+                <div class="main-column-list">
+                    <ul>
+                        <li class="list-item">Web
+                            <ul class="nav-list">
+                                {% for web in web_list %}
+                                <li class="list-in-list-item"><a href="#" id="item-title">{{ web.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        <li class="list-item">Mobile
+                            <ul class="nav-list">
+                                {% for mobile in mobile_list %}
+                                <li class="list-in-list-item"><a href="#" id="item-title">{{ mobile.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        <li class="list-item">IoT
+                            <ul class="nav-list">
+                                {% for iot in iot_list %}
+                                <li class="list-in-list-item"><a href="#" id="item-title">{{ iot.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        <li class="list-item">Life
+                            <ul class="nav-list">
+                                {% for life in life_list %}
+                                <li class="list-in-list-item"><a href="#" id="item-title">{{ life.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    </ul>
+                </div>      
+            </div>
+            <div class="main-content col-sm-9">
+                <div class="main-column-content">
+                    <div>Content</div>
+                </div>
+                {% block body %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+</body>
+</html>

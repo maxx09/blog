@@ -1,0 +1,122 @@
+nav {
+    background-color: #25292E;
+}
+
+body {
+    background-color: #25292E;
+}
+
+.jumbotron {
+    background-color: #25292E;
+    border-radius: 0;
+    height: 180px;
+}
+
+.display-4 {
+    text-align: center;
+}
+
+.jumbotron .p-1 {
+    color: red;
+}
+.jumbotron .p-2 {
+    color: #3873A3;
+}
+
+.jumbotron .p-3 {
+    color: white;
+}
+
+.jumbotron .p-4 {
+    color: yellow;
+}
+
+.jumbotron p {
+    color: #3873A3;
+}
+
+.fl-right {
+    float: right;
+}
+
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+    color: #999;
+    transition: ease-in-out color .15s;
+}
+.site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-inline > input {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+.form-inline > button {
+    border: 0;
+}
+
+
+.row {
+    justify-content: center;
+}
+
+.main-category {
+    color: #999;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.main-content {
+    color: #999;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.main-column-title {
+    margin-bottom: 10px;
+}
+
+.main-column-content {
+    margin-bottom: 30px;
+}
+.main-column-content:active, .main-column-content:hover {
+    color: white;
+}
+
+.btn-hide {
+    float: right;
+    margin-right: 5px;
+}
+
+.btn-hide:hover {
+    color: white;
+}
+
+.main-column-list > ul > .list-item {
+    color: yellow;
+}
+
+#item-title {
+    color: #3873A3;
+    text-decoration: none;
+}
+
+#item-title:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.content-list-item {
+    margin: 10px;
+}
+
+.post-list, .nav-list {
+    list-style: none;
+}
