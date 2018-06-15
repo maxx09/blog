@@ -13,5 +13,3 @@ def index(request):
         'iot_list':iot_list,
         'life_list':life_list,
         'post_list':post_list})
-
-
