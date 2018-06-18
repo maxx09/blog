@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<form  action="" method="POST" enctype="multipart/form-data" novalidate>
+    {% csrf_token %}
+    <h2 class="subtitle">새 글 작성</h2>
+    <div class="container">
+        <div class="form-group">
+            <label for="input-title">제목 : </label>
+            <input type="text" id="input-title" class="form-control" placeholder="글 제목" name="title"/>
+            <label for="input-content">내용 : </label>
+            <input type="text" id="input-content" class="form-control" placeholder="내용" name="content"/>
+            <label for="input-image">사진 : </label>
+            <input type="file" id="input-image" class="form-control" name="image"/>
+            <label for="input-category">카테고리 선택</label>
+            <select name="category" id="category">
+                <option value selected>--------</option>
+                <option value="Web">Web</option>
+                <option value="Mobile">Mobile</option>
+                <option value="IoT">IoT</option>
+                <option value="Life">Life</option>
+                <option value="Work">Work</option>
+            </select>
+            <div class="btn-space">
+                <input type="submit" class="btn "/>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

@@ -49,34 +49,18 @@
                 </div>
                 <div class="main-column-list">
                     <ul>
-                        <li class="list-item">Web
+                        {% for category in category_list %}
+                        <li class="list-item">
+                            {{ category }}
                             <ul class="nav-list">
-                                {% for web in web_list %}
-                                <li class="list-in-list-item"><a href="#" id="item-title">{{ web.title }}</a></li>
+                                {% for post in post_list %}
+                                    {% if post.category.category_name == category.category_name %}
+                                    <li class="list-in-list-item"><a href="#" id="item-title">{{ post.title }}</a></li>
+                                    {% endif %}
                                 {% endfor %}
                             </ul>
                         </li>
-                        <li class="list-item">Mobile
-                            <ul class="nav-list">
-                                {% for mobile in mobile_list %}
-                                <li class="list-in-list-item"><a href="#" id="item-title">{{ mobile.title }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                        <li class="list-item">IoT
-                            <ul class="nav-list">
-                                {% for iot in iot_list %}
-                                <li class="list-in-list-item"><a href="#" id="item-title">{{ iot.title }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                        <li class="list-item">Life
-                            <ul class="nav-list">
-                                {% for life in life_list %}
-                                <li class="list-in-list-item"><a href="#" id="item-title">{{ life.title }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </div>      
             </div>

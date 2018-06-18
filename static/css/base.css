@@ -99,6 +99,10 @@ body {
     color: white;
 }
 
+.main-column-list > ul {
+    list-style: none;
+}
+
 .main-column-list > ul > .list-item {
     color: yellow;
 }
